@@ -143,7 +143,8 @@
               "projects/account-sub-project/src/assets"
             ],
             "styles": [
-              "projects/account-sub-project/src/styles.css"
+              "projects/account-sub-project/src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.css"
             ],
             "scripts": []
           },
