@@ -8,14 +8,14 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'account-custom-elements';
 
-  addExternal() {
+  loadDynamically() {
     const script = document.createElement('script');
     script.src = 'assets/account-sub-project.bundle.js';
     document.body.appendChild(script);
 
     // add web component
     const tile = document.createElement('account-container');
-    tile.setAttribute('a', '100');
+    tile.setAttribute('a', 'user details');
 
     const content = document.getElementById('content');
     content.appendChild(tile);
