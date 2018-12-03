@@ -8,7 +8,10 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "start:ce": "ng serve --project account-sub-project -o"
+    "start:ce": "ng serve --project account-sub-project -o",
+    "build:ce": "npm run bundle:ce && npm run copy:ce",
+    "copy:ce": "cpr dist/account-sub-project/main.js src/assets/account-sub-project.bundle.js -o",
+    "bundle:ce": "ng build --project account-sub-project --prod --output-hashing=none"
   },
   "private": true,
   "dependencies": {
