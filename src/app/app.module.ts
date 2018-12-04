@@ -9,28 +9,27 @@ import { AccountData } from 'projects/account-sub-project/src/app/account/accoun
 import { AccountModule } from 'projects/account-sub-project/src/app/account/account.module';
 // tslint:disable-next-line:max-line-length
 import { AccountContainerComponent } from 'projects/account-sub-project/src/app/account/containers/account-container/account-container.component';
-import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { HomeContainerComponent } from './home/containers/home-container/home-container.component';
+import { AppComponent } from './app.component';
+import { MenuComponent } from './home/components/menu.component';
 import { WelcomeComponent } from './home/components/welcome.component';
-import { LoginComponent } from './user/login.component';
+import { HomeContainerComponent } from './home/containers/home-container/home-container.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { UserModule } from './user/user.module';
-import { MenuComponent } from './home/components/menu.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeContainerComponent,
-    WelcomeComponent,
-    PageNotFoundComponent,
-    MenuComponent
+    // HomeContainerComponent,
+    // WelcomeComponent,
+    // PageNotFoundComponent,
+    // MenuComponent
   ],
   imports: [
     BrowserModule,
     AccountModule,
-    AppRoutingModule,
-    UserModule,
+    // AppRoutingModule,
+    // UserModule,
     StoreModule.forRoot({}),
     EffectsModule.forRoot([]),
     HttpClientModule,
