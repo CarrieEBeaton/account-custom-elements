@@ -47,7 +47,4 @@ export class AppModule {
     const accountContainer = createCustomElement(AccountContainerComponent, { injector: this.injector });
     customElements.define('account-container', accountContainer);
   }
-
-  ngDoBootstrap() {
-  }
 }
