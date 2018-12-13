@@ -20,31 +20,31 @@ import { UserModule } from './user/user.module';
 @NgModule({
   declarations: [
     AppComponent,
-    // HomeContainerComponent,
-    // WelcomeComponent,
-    // PageNotFoundComponent,
-    // MenuComponent
+    HomeContainerComponent,
+    WelcomeComponent,
+    PageNotFoundComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
-    AccountModule,
-    // AppRoutingModule,
-    // UserModule,
+    // AccountModule,
+    AppRoutingModule,
+    UserModule,
     StoreModule.forRoot({}),
     EffectsModule.forRoot([]),
     HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(AccountData),
   ],
   providers: [],
-  entryComponents: [
-    AccountContainerComponent
-  ],
+  // entryComponents: [
+  //   AccountContainerComponent
+  // ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   bootstrap: [AppComponent]
 })
 export class AppModule {
-  constructor(private injector: Injector) {
-    const accountContainer = createCustomElement(AccountContainerComponent, { injector: this.injector });
-    customElements.define('account-container', accountContainer);
-  }
+  // constructor(private injector: Injector) {
+  //   const accountContainer = createCustomElement(AccountContainerComponent, { injector: this.injector });
+  //   customElements.define('account-container', accountContainer);
+  // }
 }
